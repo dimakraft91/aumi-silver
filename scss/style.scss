@@ -7,6 +7,10 @@ html {
 	font-size: 10px;
 }
 
+html, body { 
+    overflow-x: hidden;
+}
+
 a {
 	text-decoration: none;
 }
@@ -22,9 +26,8 @@ font-weight: 500;
 font-size: 35px;
 text-transform: uppercase;
 color: #000000;
-margin-top: 40px;
 margin-bottom: 6px;
-padding-top: 60px;
+padding-top: 40px;
 }
 
 .description {
@@ -74,6 +77,11 @@ line-height: 130%;
 letter-spacing: -0.02em;
 color: #000000;
     max-width: 181px;
+}
+
+.row {
+	display: grid;
+		        gap: 20px;
 }
 
 .bottom {
@@ -436,99 +444,8 @@ position: relative;
 
 }
 
-.talk {
-	&__container {}
-	&__block {
-		display: flex;
-		justify-content: space-between;
-	}
-	&__top {}
-	&__title {
-		margin-top: 135px;
-		position: relative;
-		&:after {
-		content: "";
-		background: url("../img/talk/ava-group.png");
-		width: 128px;
-		height: 46px;
-		position: absolute;
-		display: inline-block;
-        right: -162px;
-	}
-	}
-	&__description {
-		max-width: 420px;
-		margin-bottom: 37px;
-	}
-	&__right {
-		    margin-top: 148px;
-	}
-	&__btn {
-		border: 1px solid #000000;
-border-radius: 20px;
-text-decoration: none;
-font-family: 'Manrope';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 130%;
-text-align: center;
-letter-spacing: -0.02em;
-color: #3A3A3A;
-padding: 9px 66px;
-	}
-}
 
 
-
-
-.talk {
-	&__bottom {
-		display: flex;
-		justify-content: space-between;
-		margin-bottom: 60px;
-
-	}
-	&__bottom-item {
-		background: #F2F2F2;
-border-radius: 20px;
-width: calc(33.3% - 10px);
-padding-bottom: 25px;
-	}
-	&__bottom-link a {
-		font-family: 'Manrope';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-letter-spacing: -0.02em;
-text-decoration-line: underline;
-color: #000000;
-padding-left: 64px;
-margin-top: 17px;
-opacity: 0.41;
-	}
-	.item__title {
-		font-family: "Inter", serif;
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-letter-spacing: -0.02em;
-color: #1E1E1E;
-text-align: right;
-	}
-	.item__description {
-		font-family: 'Manrope';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 130%;
-letter-spacing: -0.02em;
-color: #000000;
-margin-bottom: 17px;
-max-width: 330px;
-padding-right: 25px;
-	}
-}
 .item {
 	&__title {
 		padding-left: 18px;
@@ -542,33 +459,6 @@ padding-right: 25px;
 	}
 }
 
-.talk__bottom-block {
-	padding-top: 30px;
-	padding-left: 64px;
-	display: flex;
-}
-
-.talk .item__title p {
-	font-family: 'Manrope';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-letter-spacing: -0.02em;
-color: #000000;
-margin-top: 5px;
-position: relative;
-opacity: 0.41;
-}
-
-.talk .item__title p:before {
-	content: "";
-		background: url("../img/talk/star.png");
-		width: 110px;
-		height: 18px;
-		position: absolute;
-		display: inline-block;
-		    left: -2px;;
-}
 
 .choice__left {
 	display: flex;
@@ -576,13 +466,11 @@ opacity: 0.41;
 	justify-content: space-between;
 }
 
-@media screen and (max-width: 1225px) {
-	.talk .item__title p:before {
-		left: -50px;
-	}
-}
+
+
 
 .sale {
+	padding-bottom: 70px;
 	&__container {
 		display: flex;
 		justify-content: space-between;
@@ -598,7 +486,6 @@ margin-right: 20px;
 	}
 	&__title {
 		margin-top: 0;
-		padding-top: 60px;
 	}
 	&__description {}
 	&__row {
@@ -651,52 +538,156 @@ margin-bottom: 42px;
 		max-width: 100%;
 	}
 }
+
+
+// price-per-gram
+
+.price-per-gram {
+	background-color: #F3F3F3;
+	padding-bottom: 70px;
+	&__container {}
+	&__top {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__title {
+		margin-bottom: 14px;
+	}
+	&__description {
+		padding-top: 40px;
+		max-width: 200px;
+	}
+	&__row {
+		display: grid;
+		    grid-template-columns: repeat(2, 1fr);
+		        gap: 20px;
+	}
+	&__col {
+		border-radius: 20px;
+		background: #fff;
+	}
+	&__item {
+		border-bottom: 1px solid #ffe03c;
+		padding-bottom: 10px;
+		margin-left: 30px;
+		margin-right: 36px;
+		font-family: "Manrope", serif;
+font-weight: 500;
+font-size: 14px;
+letter-spacing: -0.02em;
+color: #000;
+display: flex;
+justify-content: space-between;
+margin-top: 10px;
+	&:first-child {
+		margin-top: 25px;
+	}
+	&:last-child {
+		border-bottom: unset;
+		padding-bottom: 28px;
+	}
+	}
+	&__item-left {
+		&_grey {
+			display: block;
+			font-family: "Manrope", serif;
+font-weight: 500;
+font-size: 12px;
+letter-spacing: -0.02em;
+color: #000;
+opacity: 0.23;
+		}
+	}
+	&__item-right {
+		&_grey {
+			display: block;
+			font-family: "Manrope", serif;
+font-weight: 500;
+font-size: 12px;
+letter-spacing: -0.02em;
+color: #000;
+opacity: 0.23;
+		}
+	}
+	&__row-bottom {
+		margin-top: 16px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		        gap: 20px;
+	}
+}
 .container {
 }
 .title {
 }
 .description {
 }
+.bottom-row {
+}
+.bottom {
+	&__col {
+		border-radius: 20px;
+		background: #fff;
+		padding: 28px 28px 35px 26px;
+		&:last-child .bottom__col-title {
+			margin-bottom: 26px;
+		}
+	}
+	&__col-title {max-width: 200px;
+
+		}
+	&__col-description {
+		    max-width: 200px;
+	}
+	&__col-icon {
+		    display: flex
+;
+    justify-content: center;
+    margin-top: 42px;
+	}
+	&__col-img {}
+	&__col-btn {}
+	font-family: "Manrope", serif;
+font-weight: 700;
+font-size: 16px;
+letter-spacing: -0.02em;
+text-align: center;
+color: #3f3f3f;
+	&__col-social {
+		margin-top: 24px;	
+	}
+	&__col-link {}
+	&__col-answer {
+		font-family: var(--font-family);
+font-weight: 500;
+font-size: 12px;
+letter-spacing: -0.03em;
+color: #877e7e;
+opacity: 0.58;
+margin-top: 13px;
+	}
+}
+.social-img {
+	width: 30px;
+	&:first-child {
+		margin-right: 4px;
+	}
+}
 
 
+// price-per-gram
+
+// process
 
 .process {
-	&__bg_dashed {
-		position: relative;
-		&:before {
-		content: "";
-		background: url("../img/process/border-dashed.png");
-		width: 696px;
-		height: 1px;
-		position: absolute;
-		display: inline-block;
-		    left: 24px;
-    top: 19px;
-    z-index: 1;
-	}
-	}
-	background: #F3F3F3;
-	&__container {}
-	&__title {
-		margin-top: 65px;
-		margin-bottom: 58px;
-	}
-	&__bottom {
+	&__step {
 		display: flex;
-		justify-content: space-between;
-		
-	}
-	&__item {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		&:first-child {
-			
-		}
-		&:nth-child(3) .process__item-step {
-			left: -65px;
-		}
-		&-step {
+
+	&-number	{
+		&:last-child:before 
+			 {
+				background: unset;
+			}
 			background: #FFE03C;
 border-radius: 60px;
 width: 40px;
@@ -712,7 +703,47 @@ color: #000000;
 margin-bottom: 33px;
 position: relative;
 		z-index: 2;
+			&:before {
+		content: "";
+		background: url("../img/process/border-dashed.png");
+		width: 327px;
+		height: 1px;
+		position: absolute;
+		display: inline-block;
+		    left: 41px;
+    top: 19px;
+    z-index: 1;
+	}
+	&:not(:last-child) {
+		          margin-right: 311px;
+	    }
+	    &:nth-child(2) {
+	    	    margin-right: 311px;
+	    }
+		}
+	}
+	
+	&__container {}
+	&__title {
+		padding-top: 55px;
+		margin-bottom: 58px;
+	}
+	&__bottom {
+		display: flex;
+		padding-bottom: 130px;
 		
+	}
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		text-align: left;
+		&:first-child {
+			margin-right: 118px;
+		}
+		&:nth-child(2) {
+			margin-right: 29px;
 		}
 	}
 	&__item-title {
@@ -780,7 +811,201 @@ opacity: 0.58;
 }
 }
 
+.process__item:last-child:before {
+	background: unset;
+}
 
+// process
+
+// talk
+
+.talk {
+	&__container {}
+	&__block {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__top {}
+	&__title {
+		padding-top: 0;
+		position: relative;
+		&:after {
+		content: "";
+		background: url("../img/talk/ava-group.png");
+		width: 128px;
+		height: 46px;
+		position: absolute;
+		display: inline-block;
+        right: -162px;
+	}
+	}
+	&__description {
+		max-width: 420px;
+		margin-bottom: 37px;
+	}
+	&__right {
+		    
+	}
+	&__btn {
+		border: 1px solid #000;
+border-radius: 20px;
+font-family: "Manrope", sans-serif;
+font-weight: 500;
+font-size: 14px;
+letter-spacing: -0.02em;
+text-align: center;
+color: #3a3a3a;
+padding: 9px 66px;
+background: transparent;
+	}
+}
+
+.talk {
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 60px;
+
+	}
+	&__bottom-item {
+		background: #F2F2F2;
+border-radius: 20px;
+width: calc(33.3% - 10px);
+padding-bottom: 25px;
+	}
+	&__bottom-link a {
+		font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+letter-spacing: -0.02em;
+text-decoration-line: underline;
+color: #000000;
+padding-left: 64px;
+margin-top: 17px;
+opacity: 0.41;
+	}
+	.item__title {
+		font-family: "Inter", serif;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+letter-spacing: -0.02em;
+color: #1E1E1E;
+text-align: right;
+	}
+	.item__description {
+		font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 130%;
+letter-spacing: -0.02em;
+color: #000000;
+margin-bottom: 17px;
+max-width: 330px;
+padding-right: 25px;
+	}
+}
+
+.talk__bottom-block {
+	padding-top: 30px;
+	padding-left: 64px;
+	display: flex;
+}
+
+.talk .item__title p {
+	font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+letter-spacing: -0.02em;
+color: #000000;
+margin-top: 5px;
+position: relative;
+opacity: 0.41;
+}
+
+.talk .item__title p:before {
+	content: "";
+		background: url("../img/talk/star.png");
+		width: 110px;
+		height: 18px;
+		position: absolute;
+		display: inline-block;
+		    left: -2px;;
+}
+
+@media screen and (max-width: 1225px) {
+	.talk .item__title p:before {
+		left: -50px;
+	}
+}
+
+// talk
+
+// products
+
+.products {
+	    background-color: #F3F3F3;
+	    padding-bottom: 60px;
+	&__container {}
+	&__title {
+		padding-top: 45px;
+		margin-bottom: 25px;
+	}
+	&__items {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	&__item {
+		display: flex;	
+		align-items: center;
+		flex-direction: column;	
+		border-radius: 20px;
+		background: #fff;
+		padding: 28px 22px;	
+	}
+	&__item-image {
+
+	}
+	&__items-img {max-width: 100%;height: 100%;}
+	&__item-date {
+		font-family: "Manrope", serif;
+font-weight: 500;
+font-size: 14px;
+letter-spacing: -0.02em;
+color: #000;
+opacity: 0.25;
+margin-top: 17px;
+margin-bottom: 10px;
+	}
+	&__item-title {
+		font-family: "Manrope", serif;
+font-weight: 500;
+font-size: 14px;
+line-height: 130%;
+letter-spacing: -0.02em;
+color: #000;
+margin-bottom: 17px;
+	}
+	&__item-weight {
+		font-family: "Manrope", serif;
+font-weight: 500;
+font-size: 14px;
+letter-spacing: -0.02em;
+color: #000;
+opacity: 0.25;
+	}
+}
+.container {
+}
+.title {
+}
+.row {
+}
+
+
+// products
 
 
 .price {
